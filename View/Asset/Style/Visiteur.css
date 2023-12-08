@@ -1,0 +1,146 @@
+/* Index Visiteur */
+
+#FormCR {
+    margin-top: 10vw;
+}
+
+#FormCR h1 {
+    margin-top: -5vw;
+    font-size: 4vw;
+    font-family: "Helvetica Neue";
+    color: #052550;
+}
+
+#FormCR label {
+    font-family: "Helvetica Neue";
+    color: #052550;
+}
+
+#FormCR input {
+    height: 3vw;
+    width: 20vw;
+    margin-top: 2vw;
+    border: 1px solid #052550;
+    background-color: #EDE8E4;
+}
+
+#FormCR input:read-write {
+    padding-left: 1vw;
+    color: #052550;
+}
+
+#FormCR select {
+    margin-top: 2vw;
+}
+
+#FormCR textarea {
+    height: 3vw;
+    width: 20vw;
+    margin-top: 2vw;
+    border: 1px solid #052550;
+    background-color: #EDE8E4;
+}
+
+#FormCR textarea:read-write {
+    padding-left: 1vw;
+    color: #052550;
+}
+
+#FormCR button {
+    margin-top: 1vw;
+    background-color: #E9CBB1;
+    border: none;
+    border-radius: 10px;
+    padding: 1vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+    cursor: pointer;
+}
+
+
+/* Historique CR */
+
+
+.TitlePage {
+    margin-left: 10vw;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.historiqueCR {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #bdbab7;
+}
+
+.historiqueCR summary {
+    color: #052550;
+    font-family: "Helvetica Neue";
+    padding: 0.5vw;
+}
+
+.historiqueCR summary span {
+    font-weight: bold;
+}
+
+.commentaireCR {
+    color: #052550;
+    font-size: 1vw;
+    margin-left: 2vw;
+    font-family: "Helvetica Neue";
+}
+
+.gras {
+    font-weight: bold;
+}
+
+/* */
+
+.ConsultCard {
+    width: 30vw;
+    padding: 2vw;
+    background-color: #E9CBB1;
+    border: 2px solid #052550;
+}
+
+.TextConsult {
+    font-family: "Helvetica Neue";
+    color: #052550;
+    font-weight: normal;
+}
+
+.TextConsult span {
+    font-weight: bold;
+}
+
+.FormInfo {
+    width: 30vw;
+    background-color: #E9CBB1;
+    border-radius: 10px;
+}
+
+.FormInfo label {
+    color: #052550;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+.FormInfo input {
+    height: 2vw;
+    margin-top: 2vw;
+    width: 10vw;
+}
+
+.FormInfo select {
+    margin-top: 2vw;
+}
+
+.FormInfo button {
+    padding: 1vw;
+    background-color: #E9CBB1;
+    border: none;
+    border-radius: 10px;
+}

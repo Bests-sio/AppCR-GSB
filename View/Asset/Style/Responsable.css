@@ -1,0 +1,481 @@
+.ButtonOption {
+    margin-left: 5vw;
+    color: #052550;
+    border-bottom: 1px solid #052550;
+}
+
+
+/*tableau d'affichage produit*/
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(232, 216, 204);
+
+}
+
+th {
+    background-color: #EDE8E4;
+    font-weight: bold;
+    text-align: center;
+    border: 1.5px solid rgb(232, 216, 204);
+}
+
+tr:nth-child(even) {
+    background-color: #EDE8E4;
+}
+
+td {
+    padding: 1vw;
+    border-top: 1px solid rgb(232, 216, 204);
+    border-right: 1px solid rgb(238, 229, 221);
+}
+
+.tableau {
+    font-family: "Helvetica Neue", sans-serif;
+    color: #052550;
+    margin-top: -30vw;
+    margin-left: 20vw;
+}
+
+.titre_tableau {
+    margin-left: 0vw;
+    margin-top: 4vw;
+    font-size: 3vw;
+    color:  #052550;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+/*tableau d'affichage praticien*/
+.tableP {
+    border-collapse: collapse;
+    border: 2px solid rgb(232, 216, 204);
+
+}
+
+.thP {
+    background-color: #EDE8E4;
+    font-weight: bold;
+    text-align: center;
+    border: 1.5px solid rgb(232, 216, 204);
+
+}
+
+
+.trP:nth-child(even) {
+    background-color: #EDE8E4;
+}
+
+.tdP {
+    border-top: 1px solid rgb(232, 216, 204);
+    border-right: 1px solid rgb(238, 229, 221);
+    height: 3vw;
+}
+
+.tdP a {
+    color: #E9CBB1;
+}
+
+.tableauP {
+    margin-top: 3vw;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #052550;
+}
+
+/*tableau d'affichage user*/
+.tableU {
+    border-collapse: collapse;
+    border: 2px solid rgb(232, 216, 204);
+
+}
+
+.thU {
+    background-color: #EDE8E4;
+    font-weight: bold;
+    text-align: center;
+    border: 1.5px solid rgb(232, 216, 204);
+
+}
+
+
+.trU:nth-child(even) {
+    background-color: #EDE8E4;
+}
+
+.tdU {
+    border-top: 1px solid rgb(232, 216, 204);
+    border-right: 1px solid rgb(238, 229, 221);
+    height: 3vw;
+}
+
+.tableauU {
+    margin-top: 5vw;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #052550;
+}
+
+/* espace ajout praticien */
+
+.FormAjoutPraticien {
+    margin-top: 3vw;
+}
+
+.FormAjoutPraticien h2 {
+    margin-top: 2vw;
+    font-size: 4vw;
+    font-family: "Helvetica Neue";
+    color: #052550;
+}
+
+.FormAjoutPraticien input {
+    height: 3vw;
+    width: 20vw;
+    margin-top: 2vw;
+    border: 1px solid #052550;
+    background-color: #EDE8E4;
+}
+
+.FormAjoutPraticien label {
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.FormAjoutPraticien select {
+    margin-top: 2vw;
+}
+
+.FormAjoutPraticien input:read-write {
+    padding-left: 1vw;
+    color: #052550;
+}
+
+.buttonAjoutPraticien {
+    background-color: #8c6a52;
+    border-radius: 10px;
+    padding: 1vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+    cursor: pointer;
+}
+
+.FormAjoutPraticien h3 {
+    margin-top: 1vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+    font-size: 1vw;
+}
+
+.FormAjoutPraticien h3 a {
+    color: #E9CBB1;
+}
+
+/* espace modif praticien*/
+
+#praticienDetails {
+    width: auto;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.div_modif {
+    height: 30vw;
+    width: 30vw;
+    margin-bottom: 5vw;
+    background: #ecd8c7;
+    border-radius: 10px;
+}
+
+
+.div_cabinet{
+    margin-left: 5vw;
+}
+
+.titre_praticien{
+    margin-top: 3vw;
+    text-align: center;
+    font-size: 2vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_modif label {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_modif p {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_modif button {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    padding: 1vw;
+    border-radius: 5px;
+    border: none;
+    background-color: #052550;
+    color: #EDE8E4;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+
+.CRassocie {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #bdbab7;
+}
+
+.CRassocie summary {
+    color: #052550;
+    font-family: "Helvetica Neue";
+    padding: 0.5vw;
+}
+
+.commentaireCRassocie {
+    color: #052550;
+    font-size: 1vw;
+    margin-left: 2vw;
+    font-family: "Helvetica Neue";
+}
+
+
+
+
+.historiqueCRglobal {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #bdbab7;
+}
+
+.historiqueCRglobal summary {
+    color: #052550;
+    font-family: "Helvetica Neue";
+    padding: 0.5vw;
+}
+
+.commentaireCRglobal {
+    color: #052550;
+    font-size: 1vw;
+    margin-left: 2vw;
+    font-family: "Helvetica Neue";
+}
+
+
+/* espace modif praticien*/
+
+.div_praticien{
+    margin-left: 5vw;
+    background: #ecd8c7;
+    border-radius: 10px;
+    height: 30vw;
+}
+
+.div_praticien label {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_praticien p {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_cabinet{
+    background: #ecd8c7;
+    border-radius: 10px;
+    height: 30vw;
+}
+
+.div_cabinet label {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_cabinet p {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.titre_praticien{
+    margin-top: 3vw;
+    text-align: center;
+    font-size: 2vw;
+    color: #052550;
+}
+
+
+.div_produit{
+    width: 30vw;
+    margin-left: 5vw;
+    background: #ecd8c7;
+    border-radius: 10px;
+    height: 30vw;
+}
+
+.div_produit label {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_produit p {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_produit button {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    padding: 1vw;
+    border-radius: 5px;
+    border: none;
+    background-color: #052550;
+    color: #EDE8E4;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.div_user{
+    width: 35vw;
+    margin-left: 5vw;
+    background: #ecd8c7;
+    border-radius: 10px;
+    height: 30vw;
+}
+
+.div_user label {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_user p {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+    line-height: 2.5vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+}
+
+.div_user button {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    padding: 1vw;
+    border-radius: 5px;
+    border: none;
+    background-color: #052550;
+    color: #EDE8E4;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+.StatCarreAll{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 32% 32% 33%;
+    margin: 5vw;
+}
+
+.statCarré{
+    border: 3px solid  #052550;
+    border-radius: 10px;
+    margin-right: 2vw;
+    background-color: #ecd8c7;
+}
+
+.statCarré p {
+    margin : 2vw;
+    font-size: 3vw;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: #052550;
+
+}
+
+.statCarré h3{
+    color: #052550;
+    margin: 1.5vw;
+    text-align: center;
+    font-family: "Helvetica Neue";
+}
+
+.statDiagramme{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    margin: 5vw;
+}
+
+.diagramme{
+    height: 20vw;
+    width: 20vw;
+    margin-left: 20vw;
+}
+.diagramme h3{
+    color: #052550;
+    margin: 1.5vw;
+    text-align: center;
+    font-family: "Helvetica Neue";
+}
+

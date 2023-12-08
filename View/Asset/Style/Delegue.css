@@ -1,0 +1,72 @@
+
+
+.graphe {
+    margin: 0 auto;
+    width: 20vw;
+    height: 20vw;
+}
+
+.textDashboard {
+    width: 22vw;
+    padding: 1vw;
+    margin-top: 5vw;
+    margin-left: 30vw;
+    font-family: "Helvetica Neue";
+    color: #052550;
+    background-color: #E9CBB1;
+    border-radius: 10px;
+    border: #052550 2px solid;
+
+}
+
+.textDashboard span {
+    font-weight: bold;
+}
+
+/* ---- Page Mail ----*/
+
+.FormMail {
+    margin-top: 5vw;
+}
+
+.FormMail label {
+    font-family: "Helvetica Neue";
+    color: #052550;
+}
+
+.FormMail input {
+    height: 3vw;
+    width: 20vw;
+    margin-top: 2vw;
+    border: 1px solid #052550;
+    background-color: #EDE8E4;
+}
+
+.FormMail input:read-write {
+    padding-left: 1vw;
+    color: #052550;
+}
+
+.FormMail button {
+    margin-top: 1vw;
+    background-color: #E9CBB1;
+    border: none;
+    border-radius: 10px;
+    padding: 1vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+    cursor: pointer;
+}
+
+.FormMail select {
+    margin-top: 2vw;
+}
+
+.FormMail textarea {
+    height: 3vw;
+    width: 20vw;
+    margin-top: 2vw;
+    border: 1px solid #052550;
+    background-color: #EDE8E4;
+}
+

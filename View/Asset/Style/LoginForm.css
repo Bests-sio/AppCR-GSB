@@ -1,0 +1,48 @@
+.FormLogin {
+    margin-top: 10vw;
+}
+
+.FormLogin h1 {
+    font-size: 4vw;
+    font-family: "Helvetica Neue";
+    color: #052550;
+}
+
+.FormLogin input {
+    height: 3vw;
+    width: 20vw;
+    margin-top: 2vw;
+    border: 1px solid #052550;
+    background-color: #EDE8E4;
+}
+
+.FormLogin input:read-write {
+    padding-left: 1vw;
+    color: #052550;
+}
+
+.FormLogin select {
+
+}
+
+.FormLogin button {
+    margin-top: 1vw;
+    background-color: #E9CBB1;
+    border: none;
+    border-radius: 10px;
+    padding: 1vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+    cursor: pointer;
+}
+
+.FormLogin h3 {
+    margin-top: 1vw;
+    color: #052550;
+    font-family: "Helvetica Neue";
+    font-size: 1vw;
+}
+
+.FormLogin h3 a {
+    color: #E9CBB1;
+}
