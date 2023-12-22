@@ -9,6 +9,9 @@ $routes = array(
     'IndexMain' => array('nom' => 'IndexMain','header'=> 'HeaderIndex','controleur' => null,'model' => null, 'vue' => 'IndexMain', 'js' => 'JsMain', 'visible' => true, 'active' => true),
     'Contact' => array('nom' => 'Contact' ,'header'=> 'HeaderIndex','controleur' => null,'model' => null, 'vue' => 'Contact', 'js' => null, 'visible' => true, 'active' => true),
     'ProduitMain' => array('nom' => 'ProduitMain' ,'header'=> 'HeaderIndex','controleur' => null,'model' => 'ProduitMain', 'vue' => 'ProduitMain', 'js' => null, 'visible' => true, 'active' => true),
+    'Reset' => array('nom' => 'Reset' ,'header'=> 'HeaderIndex','controleur' => null,'model' => 'Reset', 'vue' => 'ResetVue', 'js' => null, 'visible' => true, 'active' => true),
+    'Recup' => array('nom' => 'Recup' ,'header'=> 'HeaderIndex','controleur' => null,'model' => 'Recup', 'vue' => 'RecupVue', 'js' => null, 'visible' => true, 'active' => true),
+    'Change' => array('nom' => 'Change' ,'header'=> 'HeaderIndex','controleur' => null,'model' => 'ChangePasswordModel', 'vue' => 'ChangePasswordVue', 'js' => null, 'visible' => true, 'active' => true),
 
     // Visiteur
     'IndexVisiteur' => array('nom' => 'IndexVisiteur' ,'header'=> 'HeaderVisiteur','controleur' => null,'model' => 'VCreationCR', 'vue' => 'VCreationCRIndexVue', 'js' => null, 'visible' => true, 'active' => true),

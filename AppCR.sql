@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 06 déc. 2023 à 23:48
--- Version du serveur : 10.4.28-MariaDB
--- Version de PHP : 8.2.4
+-- Généré le : ven. 22 déc. 2023 à 17:58
+-- Version du serveur : 10.4.27-MariaDB
+-- Version de PHP : 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Cabinet` (
   `id_cabinet` int(11) NOT NULL,
-  `nom` text NOT NULL,
+  `nom_cabinet` text NOT NULL,
   `ville` text DEFAULT NULL,
   `codePostal` int(7) DEFAULT NULL,
   `rue` varchar(255) DEFAULT NULL,
@@ -40,10 +40,10 @@ CREATE TABLE `Cabinet` (
 -- Déchargement des données de la table `Cabinet`
 --
 
-INSERT INTO `Cabinet` (`id_cabinet`, `nom`, `ville`, `codePostal`, `rue`, `id_region`) VALUES
+INSERT INTO `Cabinet` (`id_cabinet`, `nom_cabinet`, `ville`, `codePostal`, `rue`, `id_region`) VALUES
 (1, 'Cabinet Des Terreaux', 'Lyon', 69001, '3 rue des Capucins', 2),
 (2, 'Cabinet Sans-Soucis', 'Lyon', 69003, '54 cour Albert Thomas', 2),
-(3, 'cabinet de l\'hotel de ville', 'saint etienne', 42000, '01 place hotel de ville', 2),
+(3, 'cabinet de l\'hotel de ville', 'saint etienne', 42000, '01 place hotel de ville', 6),
 (4, 'cabinet jules ledin', 'saint etienne', 42000, '14 rue jules ledin', 2);
 
 -- --------------------------------------------------------
@@ -72,19 +72,18 @@ CREATE TABLE `CompteRendu` (
 
 INSERT INTO `CompteRendu` (`id_compteRendu`, `date`, `motif`, `bilan`, `id_visiteur`, `id_praticien`, `id_echantillon_1`, `id_echantillon_2`, `note`, `id_cabinet`, `id_region`) VALUES
 (4, '2023-12-02', 'Visite présentation produit', 'Ensemble très bien', 28, 2, 3, 3, 4, 1, 2),
-(5, '2023-12-05', 'Visite présentation produit', 'Très bien passé. Mais le produit n\'a pas plu.', 28, 1, 3, 3, 4, 2, 2),
-(6, '2023-12-14', 'Première visite', 'Très bien passé', 28, 2, 3, 3, 4, 1, 2),
-(8, '2023-12-09', 'visite présentation produit', 'N\'a pas voulu de léchantillon..', 28, 3, 3, 3, 0, 1, 2),
+(5, '2022-12-05', 'Visite présentation produit', 'Très bien passé. Mais le produit n\'a pas plu.', 28, 1, 3, 3, 4, 2, 2),
+(8, '2022-12-09', 'visite présentation produit', 'N\'a pas voulu de léchantillon..', 28, 3, 3, 3, 0, 1, 2),
 (10, '2023-12-14', 'Visite présentation produit', 'Bien', 28, 3, 3, 3, 5, 1, 2),
 (11, '2023-12-07', 'Visite présentation produit', 'Bien', 28, 3, 3, 3, 5, 1, 2),
-(33, '2023-11-09', 'relance visite', 'pour l\'intégration potentielle du produit dans sa pratique quotidienne. Il a posé des questions spécifiques sur l\'aspect technique et a demandé des éclaircissements sur l\'aspect clinique. Dans l\'ensemble, la visite a été positive, et le praticien a montré un intérêt à en savoir plus sur les prochaines étapes. \r\n', 29, 5, 4, 1, 2, 4, 2),
+(33, '2023-11-09', 'relance visite', 'pour l\'intégration potentielle du produit dans sa pratique quotidienne. Il a posé des questions spécifiques sur l\'aspect technique et a demandé des éclaircissements sur l\'aspect clinique. Dans l\'ensemble, la visite a été positive, et le praticien a montré un intérêt à en savoir plus sur les prochaines étapes. \r\n', 29, 3, 4, 1, 2, 4, 2),
 (36, '2023-11-09', 'relance visite', 'pour l&#039;intégration potentielle du produit dans sa pratique quotidienne. Il a posé des questions spécifiques sur l&#039;aspect technique et a demandé des éclaircissements sur l&#039;aspect clinique. Dans l&#039;ensemble, la visite a été positive, et le praticien a montré un intérêt à en savoir plus sur les prochaines étapes. \r\n', 29, 4, 3, 5, 2, 3, 2),
-(37, '2023-11-17', 'visite', 'Bien que le médecin ait montré un certain scepticisme au début, il a semblé plus à l\'aise après avoir eu des réponses satisfaisantes à ses questions. Il a suggéré que des essais cliniques pilotes pourraient être envisagés dans son établissement pour évaluer l\'efficacité du produit dans un contexte réel.', 29, 5, 1, 6, 4, 4, 2),
+(37, '2022-06-17', 'visite', 'Bien que le médecin ait montré un certain scepticisme au début, il a semblé plus à l\'aise après avoir eu des réponses satisfaisantes à ses questions. Il a suggéré que des essais cliniques pilotes pourraient être envisagés dans son établissement pour évaluer l\'efficacité du produit dans un contexte réel.', 29, 2, 1, 6, 4, 4, 2),
 (39, '2023-11-24', 'visite', 'Le médecin a montré une ouverture à l&#039;idée d&#039;explorer le produit davantage et a demandé des informations sur les prochaines étapes, y compris la disponibilité d&#039;échantillons pour des essais pratiques. Il a également exprimé son intérêt pour une réunion de suivi pour approfondir certains aspects du produit. La visite s&#039;est conclue sur une note positive avec un engagement continu du praticien à explorer la possibilité d&#039;intégrer le produit dans sa pratique clinique.', 28, 1, 3, 5, 4, 2, 2),
 (40, '2023-11-24', 'visite', 'Le médecin a montré une ouverture à l&#039;idée d&#039;explorer le produit davantage et a demandé des informations sur les prochaines étapes, y compris la disponibilité d&#039;échantillons pour des essais pratiques. Il a également exprimé son intérêt pour une réunion de suivi pour approfondir certains aspects du produit. La visite s&#039;est conclue sur une note positive avec un engagement continu du praticien à explorer la possibilité d&#039;intégrer le produit dans sa pratique clinique.', 28, 1, 3, 5, 4, 2, 2),
 (41, '2023-12-05', 'visite', 'Le médecin a exprimé son enthousiasme pour l&#039;approche novatrice du produit et a posé des questions pertinentes sur son intégration potentielle dans les protocoles de traitement existants. Il a suggéré d&#039;organiser une session de formation pour son équipe afin d&#039;optimiser l&#039;utilisation du produit.', 28, 4, 6, 5, 2, 3, 2),
 (42, '2023-12-02', 'visite', 'La visite a été constructive, bien que le médecin ait exprimé le besoin de données complémentaires avant de considérer pleinement l&#039;intégration du produit dans sa pratique. Il a accepté de participer à des essais cliniques pilotes pour évaluer plus avant l&#039;efficacité et la sécurité du produit.', 28, 4, 2, 4, 4, 3, 2),
-(43, '2023-12-01', 'visite', 'Le médecin a exprimé son enthousiasme pour l&#039;approche novatrice du produit et a posé des questions pertinentes sur son intégration potentielle dans les protocoles de traitement existants. Il a suggéré d&#039;organiser une session de formation pour son équipe afin d&#039;optimiser l&#039;utilisation du produit.', 28, 5, 6, 2, 2, 4, 2);
+(43, '2023-12-01', 'visite', 'Le médecin a exprimé son enthousiasme pour l&#039;approche novatrice du produit et a posé des questions pertinentes sur son intégration potentielle dans les protocoles de traitement existants. Il a suggéré d&#039;organiser une session de formation pour son équipe afin d&#039;optimiser l&#039;utilisation du produit.', 28, 2, 6, 2, 2, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -106,12 +105,12 @@ CREATE TABLE `Echantillon` (
 --
 
 INSERT INTO `Echantillon` (`id_echantillon`, `nom`, `dateDistribution`, `quantite`, `description`, `sortie`) VALUES
-(1, 'paracétamol', '1878-11-16', 2000, 'Le paracétamol, aussi appelé acétaminophène, est un composé chimique utilisé comme antalgique et antipyrétique, qui figure parmi les médicaments les plus communs, utilisés et prescrits au monde.', 1),
-(2, 'ibuprofène', '1961-05-16', 2000, 'Il s\'agit de la substance active d\'un médicament AINS utilisé pour soulager les symptômes de l\'arthrite, de la dysménorrhée primaire, de la pyrexie et comme analgésique, spécialement en cas d\'inflammation.', 0),
-(3, 'morphine', '1804-03-16', 2000, 'Médicament extrait de l\'opium, capable de calmer des douleurs intenses en agissant sur le système nerveux central (analgésique central) et de provoquer l\'endormissement.', 1),
+(1, 'Paracétamol', '1878-11-16', 2000, 'Le paracétamol, aussi appelé acétaminophène, est un composé chimique utilisé comme antalgique et antipyrétique, qui figure parmi les médicaments les plus communs, utilisés et prescrits au monde.', 1),
+(2, 'Ibuprofène', '1961-05-16', 2000, 'Il s\'agit de la substance active d\'un médicament AINS utilisé pour soulager les symptômes de l\'arthrite, de la dysménorrhée primaire, de la pyrexie et comme analgésique, spécialement en cas d\'inflammation.', 0),
+(3, 'Morphine', '1804-03-16', 2000, 'Médicament extrait de l\'opium, capable de calmer des douleurs intenses en agissant sur le système nerveux central (analgésique central) et de provoquer l\'endormissement.', 1),
 (4, 'Venlafaxine', '2023-11-01', 2000, 'La venlafaxine, est un antidépresseur utilisé pour le traitement de la dépression et les troubles anxieux. C&#039;est un inhibiteur de la recapture de la sérotonine et de la noradrénaline (IRSNa). À doses élevées, il inhibe également la recapture de la dopamine, mais dans une moindre mesure. Son nom commercial est Effexor (de l&#039;entreprise Wyeth).  La venlafaxine est disponible dans les pharmacies en gélules ou comprimés de 37,5, 75, 150, et 225 mg uniquement sur ordonnance.', 0),
 (5, 'Quitaxon', '2023-11-01', 2000, 'Ce médicament appartient à la famille des antidépresseurs imipraminiques. Il possède des effets atropiniques, qui ne participent pas à son activité, mais qui expliquent certaines contre-indications et certains effets indésirables.', 1),
-(6, 'berroca', '2023-11-01', 2000, 'Berocca Performance est une formulation de vitamines B, de vitamine C et de magnésium, de calcium et de zinc ajoutés. Lors de sa sortie pour la première fois en 1969, Berocca est venu dans une seule saveur, Berry, qui est devenu plus tard Original Berry. Il est maintenant disponible en quatre saveurs : Berry Original, Orange, Blackcurrant et Mango &amp; Orange.  Le médecin a exprimé son enthousiasme pour l&#039;intégration potentielle du produit dans sa pratique quotidienne. Il a posé des questions spécifiques sur [aspect technique] et a demandé des éclaircissements sur [aspect clinique]. Dans l&#039;ensemble, la visite a été positive, et le Dr. [Nom du Médecin] a montré un intérêt à en savoir plus sur les prochaines étapes.', 0);
+(6, 'Berroca', '2023-11-01', 2000, 'Berocca Performance est une formulation de vitamines B, de vitamine C et de magnésium, de calcium et de zinc ajoutés. Lors de sa sortie pour la première fois en 1969, Berocca est venu dans une seule saveur, Berry, qui est devenu plus tard Original Berry. Il est maintenant disponible en quatre saveurs : Berry Original, Orange, Blackcurrant et Mango &amp; Orange.  Le médecin a exprimé son enthousiasme pour l&#039;intégration potentielle du produit dans sa pratique quotidienne. Il a posé des questions spécifiques sur [aspect technique] et a demandé des éclaircissements sur [aspect clinique]. Dans l&#039;ensemble, la visite a été positive, et le Dr. [Nom du Médecin] a montré un intérêt à en savoir plus sur les prochaines étapes.', 0);
 
 -- --------------------------------------------------------
 
@@ -174,7 +173,7 @@ INSERT INTO `Praticien` (`id_praticien`, `nom`, `prenom`, `specialité`, `id_cab
 
 CREATE TABLE `Region` (
   `id_region` int(11) NOT NULL,
-  `nom` text DEFAULT NULL,
+  `nom_region` text DEFAULT NULL,
   `id_delegue` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -182,7 +181,7 @@ CREATE TABLE `Region` (
 -- Déchargement des données de la table `Region`
 --
 
-INSERT INTO `Region` (`id_region`, `nom`, `id_delegue`) VALUES
+INSERT INTO `Region` (`id_region`, `nom_region`, `id_delegue`) VALUES
 (2, 'Auvergne-Rhône-Alpes', 29),
 (3, 'Bourgogne-Franche-Comté', 4),
 (4, 'Bretagne', 5),
@@ -201,6 +200,37 @@ INSERT INTO `Region` (`id_region`, `nom`, `id_delegue`) VALUES
 (17, 'Martinique', 18),
 (18, 'La Réunion', 19),
 (19, 'Mayotte', 20);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reset`
+--
+
+CREATE TABLE `reset` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `code` int(11) NOT NULL,
+  `expiration_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `reset`
+--
+
+INSERT INTO `reset` (`id`, `email`, `code`, `expiration_date`) VALUES
+(2, 'delegue@delegue.fr', 540312, '2023-12-22 18:08:25'),
+(3, 'delegue@delegue.fr', 330241, '2023-12-22 18:10:14'),
+(4, 'delegue@delegue.fr', 864798, '2023-12-22 18:11:42'),
+(5, 'delegue@delegue.fr', 634223, '2023-12-22 18:15:55'),
+(6, 'delegue@delegue.fr', 808163, '2023-12-22 18:17:37'),
+(7, 'delegue@delegue.fr', 756836, '2023-12-22 18:18:16'),
+(8, 'delegue@delegue.fr', 727923, '2023-12-22 18:21:07'),
+(9, 'delegue@delegue.fr', 856828, '2023-12-22 18:23:19'),
+(10, 'delegue@delegue.fr', 233831, '2023-12-22 18:25:31'),
+(11, 'delegue@delegue.fr', 922358, '2023-12-22 18:29:13'),
+(12, 'delegue@delegue.fr', 323585, '2023-12-22 18:33:19'),
+(13, 'delegue@delegue.fr', 620099, '2023-12-22 18:50:18');
 
 -- --------------------------------------------------------
 
@@ -247,7 +277,7 @@ INSERT INTO `user` (`Id_user`, `Nom`, `Prenom`, `Email`, `Password`, `Type`, `Re
 (26, 'Némar', 'Jean', 'jeannemar@gsb.fr', '$2y$10$7BVwMsJbRrRpUsh8aR12nOeoOXZs061VpqZJ6WUfnT66fnwyt1jfK', 'visiteur', 3),
 (27, 'Monmartre', 'Balzac', 'balzacmonmartre@gsb.fr', '$2y$10$2tjRPFmmJ5A6YhhcHi80y.GxgZpgb6daf28F2o0IBw2aAetLfOhs.', 'visiteur', 3),
 (28, 'visiteur', 'visiteur', 'visiteur@visiteur.fr', '$2y$10$0mNyIRDxlrfIYbBblmNPlesrNWwH8RMt4fyDBYn3ZiSxoaZsDF9qO', 'visiteur', 2),
-(29, 'delegue', 'delegue', 'delegue@delegue.fr', '$2y$10$e.aLwbvWHXbKfZtG1Hid3.1//8ndv/jrTMf7ZTjV3xwBU5dSwzSGm', 'delegue', 2);
+(29, 'delegue', 'delegue', 'delegue@delegue.fr', '$2y$10$02KJzXn053nKNqDmUni8t.axz1wCmL77UGtIQX0MQ9O9x9RCrEU7q', 'delegue', 2);
 
 -- --------------------------------------------------------
 
@@ -326,6 +356,12 @@ ALTER TABLE `Region`
   ADD KEY `id_delegue` (`id_delegue`);
 
 --
+-- Index pour la table `reset`
+--
+ALTER TABLE `reset`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
@@ -378,6 +414,12 @@ ALTER TABLE `Praticien`
 --
 ALTER TABLE `Region`
   MODIFY `id_region` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT pour la table `reset`
+--
+ALTER TABLE `reset`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `user`
