@@ -16,14 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $to = $email;
         $subject = "Code de Récupération de Mot de Passe";
         $message = "Votre code de récupération de mot de passe est : $code";
-        $headers = "From: support@gsb.fr"; // Remplacez par votre adresse e-mail
+        $headers = "From: support@gsb.fr";
 
         mail($to, $subject, $message, $headers);
 
         header("Location: Index.php?page=Reset");
         exit();
     } else {
-        echo "L'adresse e-mail n'existe pas dans notre système. Veuillez réessayer.";
+        echo "<script> alert('L adresse e-mail n existe pas dans notre système. Veuillez réessayer.') </script>";
     }
 }
 ?>

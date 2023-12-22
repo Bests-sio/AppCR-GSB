@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: Index.php?page=Change");
         exit();
     } else {
-        echo "Code invalide ou expiré. Veuillez réessayer.";
+        echo "<script> alert('Le code est invalide.') </script>";
     }
 }
 ?>
